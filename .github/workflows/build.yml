@@ -31,7 +31,7 @@ jobs:
       - name: Run godot help
         run: ./godot --help
       - name: Build (Should show error)
-        run: ./godot --export-release "a" ./project.godot
+        run: ./godot --rendering-driver opengl3 --headless --export-release "a" ./project.godot
       - name: Build for Web
         run: ./godot --headless --export-release "Web" ./project.godot
       - name: Build for Linux
