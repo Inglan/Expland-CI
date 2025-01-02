@@ -12,6 +12,12 @@ jobs:
         run: |
           pacman -Syu --noconfirm
           pacman -S godot --noconfirm
+      - name: Install wget
+        run: |
+          pacman -S wget --noconfirm
+      - name: Install Vulcan
+        run: |
+          pacman -S vulkan-icd-loader vulkan-intel --noconfirm
       - name: Download export templates
         run: |
           wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_export_templates.tpz > /dev/null
