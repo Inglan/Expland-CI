@@ -28,10 +28,10 @@ jobs:
           mkdir Build/Linux
           mkdir Build/MacOS
 
-      - name: Build for Windows
-        run: ./godot --headless --export-release "Windows Desktop" ./project.godot
       - name: Build for Linux
         run: ./godot --headless --export-release "Linux/X11" ./project.godot
+      - name: Build for Windows
+        run: ./godot --headless --export-release "Windows Desktop" ./project.godot
       - name: Build for MacOS
         run: ./godot --headless --export-release "Mac OSX" ./project.godot
       - name: Upload artifact
