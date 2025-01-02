@@ -12,9 +12,9 @@ jobs:
         run: |
           pacman -Syu --noconfirm
           pacman -S godot --noconfirm
-      - name: Install wget
+      - name: Install required utils
         run: |
-          pacman -S wget --noconfirm
+          pacman -S wget unzip --noconfirm
       - name: Install Vulcan
         run: |
           pacman -S vulkan-icd-loader vulkan-intel --noconfirm
