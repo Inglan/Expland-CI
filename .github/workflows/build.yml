@@ -28,6 +28,8 @@ jobs:
           mkdir Build/Linux
           mkdir Build/MacOS
 
+      - name: Build for Web
+        run: ./godot --headless --export-release "Web" ./project.godot
       - name: Build for Linux
         run: ./godot --headless --export-release "Linux/X11" ./project.godot
       - name: Build for Windows
